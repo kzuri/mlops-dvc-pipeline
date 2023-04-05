@@ -24,18 +24,6 @@ jobs:
 
           cml-publish by_region.png --md >> report.md
           cml-send-comment report.md
-
-      - name: Get changes
-        run: |
-          git status -uno
-
-      - uses: EndBug/add-and-commit@v7
-        with:
-          add: metrics.json by_region.png
-          author_name: CI-CD Pipeline run
-          author_email: pateldevarsh1206@gmail.com
-          message: "adding results from run"
-        
     
 
         
